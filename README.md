@@ -27,7 +27,7 @@ spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.3.4 --maste
 ![kafka_consumer_console](https://github.com/rajeevfromkrec/sf_crime_statistics_with_spark_streaming/blob/main/kafka_consumer_console.PNG?raw=true)
 
 #### screenshot of Progress report
-![kafka_consumer_console](https://github.com/rajeevfromkrec/sf_crime_statistics_with_spark_streaming/blob/main/Progress Report.PNG?raw=true)
+![kafka_consumer_console](https://github.com/rajeevfromkrec/sf_crime_statistics_with_spark_streaming/blob/main/Progress_Report.PNG?raw=true)
 
 #### screenshot of batch
 ![kafka_consumer_console](https://github.com/rajeevfromkrec/sf_crime_statistics_with_spark_streaming/blob/main/batch.PNG?raw=true)
