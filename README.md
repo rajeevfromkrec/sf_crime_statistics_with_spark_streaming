@@ -41,6 +41,11 @@ spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.3.4 --maste
 We can adjust the parameter maxOffsetsPerTrigger to specify more total number of offsets processed per trigger interval. By changing the value of maxOffsetsPerTrigger, we find that the progress report's attribute, processedRowsPerSecond,  also changes.
 
 ### 2. What were the 2-3 most efficient SparkSession property key/value pairs? Through testing multiple variations on values, how can you tell these were the most optimal?
-maxRatePerPartition
-spark.default.parallelism
-You can tell there was an optimal gain / loss by going off the above values in the first question.
+
+Apart from maxOffsetsPerTrigger following sparksession property pairs gave best result
+
+spark.default.parallelism=2 - Number of tasks that can run in parallel per core
+spark.sql.shuffle.partitions=4 - Number of partitions to use on aggregates and join RDDs
+
+Tracking inputRowsPerSecond vs processedRowsPerSecond helps in identifying which SparkSession configuration pairs were most efficient.
+
