@@ -2,6 +2,23 @@
 ### Intro
 In this project, you will be provided with a real-world dataset, extracted from Kaggle, on San Francisco crime incidents, and you will provide statistical analyses of the data using Apache Spark Structured Streaming. You will apply skills and knowledge to create a Kafka server to produce data, and ingest data through Spark Structured Streaming.
 
+### How to use the application
+In order to run the application you will need to start:
+
+#### Zookeeper:
+/usr/bin/zookeeper-server-start config/zookeeper.properties
+
+#### Kafka server:
+/usr/bin/kafka-server-start config/server.properties
+
+#### Insert data into topic:
+python kafka_server.py
+
+#### Kafka consumer console:
+kafka-console-consumer --topic "topic-name" --from-beginning --bootstrap-server localhost:9092
+
+#### Run Spark job:
+spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.3.4 --master local[*] data_stream.py
 
 Progress
 Progress
