@@ -23,14 +23,18 @@ python consumer_server.py
 #### Run Spark job:
 spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.3.4 --master local[*] data_stream.py
 
-### screenshot of kafka console consumer output
+#### screenshot of kafka console consumer output
+![kafka_consumer_console](https://github.com/rajeevfromkrec/sf_crime_statistics_with_spark_streaming/blob/main/kafka_consumer_console.PNG?raw=true)
+
+#### screenshot of Progress report
+![kafka_consumer_console](https://github.com/rajeevfromkrec/sf_crime_statistics_with_spark_streaming/blob/main/kafka_consumer_console.PNG?raw=true)
+
+#### screenshot of batch
+![kafka_consumer_console](https://github.com/rajeevfromkrec/sf_crime_statistics_with_spark_streaming/blob/main/kafka_consumer_console.PNG?raw=true)
+
+#### screenshot of Streaming UI Output
 ![kafka_consumer_console](https://github.com/rajeevfromkrec/sf_crime_statistics_with_spark_streaming/blob/main/kafka_consumer_console.PNG?raw=true)
   
-Progress
-Progress
-
-Streaming UI Output
-Streaming UI Output
 
 ### Questions
 ### 1. How did changing values on the SparkSession property parameters affect the throughput and latency of the data?
