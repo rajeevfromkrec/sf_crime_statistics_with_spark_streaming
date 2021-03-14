@@ -38,7 +38,7 @@ spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.3.4 --maste
 
 ### Questions
 ### 1. How did changing values on the SparkSession property parameters affect the throughput and latency of the data?
-You can view the values numInputRows, inputRowsPerSecond, and processedRowsPerSecond. Changing the values of the below key / value pairs showed a difference in how much data was being processed.
+We can adjust the parameter maxOffsetsPerTrigger to specify more total number of offsets processed per trigger interval. By changing the value of maxOffsetsPerTrigger, we find that the progress report's attribute, processedRowsPerSecond,  also changes.
 
 ### 2. What were the 2-3 most efficient SparkSession property key/value pairs? Through testing multiple variations on values, how can you tell these were the most optimal?
 maxRatePerPartition
